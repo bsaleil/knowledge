@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Definitions</h1>
+  <div>
+    <button type="button" onclick="location.href='/definition/add';" class="btn btn-primary"><i class="bi bi-plus-lg"></i></button>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <tbody>
+    <% for (var i=0; i<definitions.length; i++) { %>
+    <tr>
+      <td class="align-middle"><%= definitions[i].name %></td>
+      <td class="align-middle"><%= definitions[i].text %></td>
+      <td style="text-align: right;">
+        <button type="button" onclick="location.href='/definition/edit/<%= definitions[i]._id %>';" class="btn btn-info"><i class="bi bi-pencil-fill"></i></button>
+        <form style="display:inline;" action="/definition/remove/<%= definitions[i]._id %>" method="post">
+          <button type="submit" class="btn btn-info"><i class="bi bi-trash-fill"></i></button>
+        </form>
+      </td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
