@@ -12,6 +12,10 @@
   font-weight: bold;
 }
 
+#noteEdit {
+  margin-top: 15px;
+}
+
 /* !CUSTOM */
 
 body {

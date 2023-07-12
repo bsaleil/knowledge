@@ -1,13 +1,14 @@
-<form style="display:inline;" action="/note/remove/<%= note._id %>" method="post">
-  <div class="form-group">
-    <input type="text" class="form-control" id="noteName" name="name" value="<%= note.name %>" oninput="onTextChange(event, '<%= note._id %>')">
-  </div>
+<div id="noteEdit">
+  <form style="display:inline;" action="/note/remove/<%= note._id %>" method="post">
+    <div class="form-group">
+      <input type="text" class="form-control" id="noteName" name="name" value="<%= note.name %>" oninput="onTextChange(event, '<%= note._id %>')">
+    </div>
 
-  <div class="form-group">
-    <textarea class="form-control" id="noteText" rows="40" name="text" oninput="onTextChange(event, '<%= note._id %>')"><%= note.text %></textarea>
-  </div>
+    <div class="form-group">
+      <textarea class="form-control" id="noteText" rows="40" name="text" oninput="onTextChange(event, '<%= note._id %>')"><%= note.text %></textarea>
+    </div>
 
-  <button type="submit" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Remove</button>
-</form>
-
+    <button type="submit" class="btn btn-danger"><i class="bi bi-trash-fill"></i> Remove</button>
+  </form>
+</div>
 <script src="/js/note.js"></script>
